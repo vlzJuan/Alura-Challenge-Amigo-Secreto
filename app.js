@@ -32,10 +32,11 @@ function sortearAmigo() {
         return;
     }
 
-    mostrarResultado(amigos);
+    const amigoAleatorio = amigos[Math.floor(Math.random() * amigos.length)];
+    mostrarResultado(amigoAleatorio);
 }
 
-function mostrarResultado(listaSorteada) {
+function mostrarResultado(amigoElegido) {
     const resultado = document.getElementById("resultado");
-    resultado.innerHTML = "Tu amigo secreto sorteado es: A IMPLEMENTAR."; // Aca implemento elegir un amigo especifico aleatorio.
+    resultado.innerHTML = `Tu amigo secreto sorteado es: ${amigoElegido}`; // Aca implemento elegir un amigo especifico aleatorio.
 }
